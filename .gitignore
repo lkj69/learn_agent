@@ -1,0 +1,16 @@
+# VS Code 配置
+.vscode/
+
+# 环境变量
+.env
+
+# 可选：Python 虚拟环境（你图里有 .venv，一般也建议忽略）
+.venv/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
