@@ -1,8 +1,9 @@
 import requests
-from langchain_core.tools import tool
+
+from ._server import mcp
 
 
-@tool
+@mcp.tool()
 def get_weather(city: str, dateTime: str) -> str:
     """
     查询指定城市在指定日期的天气。

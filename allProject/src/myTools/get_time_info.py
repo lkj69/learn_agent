@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
 
-from langchain_core.tools import tool
+from ._server import mcp
 
 
-@tool
+@mcp.tool()
 def get_time_info(query_type: str = "current") -> str:
     """获取时间相关信息。
 

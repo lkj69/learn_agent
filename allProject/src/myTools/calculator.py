@@ -1,7 +1,9 @@
-from langchain_core.tools import tool
 import math
 
-@tool
+from ._server import mcp
+
+
+@mcp.tool()
 def calculator(expression: str) -> str:
     """执行数学计算
     支持基本运算符（+、-、*、/、**）和常用数学函数

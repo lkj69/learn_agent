@@ -1,5 +1,6 @@
 import requests
-from langchain_core.tools import tool
+
+from ._server import mcp
 
 
 SUPPORTED_CURRENCIES = {
@@ -14,7 +15,7 @@ SUPPORTED_CURRENCIES = {
 API_URL = "https://api.frankfurter.dev/v2/rate"
 
 
-@tool
+@mcp.tool()
 def convert_currency(amount: float, from_curr: str, to_curr: str) -> str:
     """货币转换工具。
 

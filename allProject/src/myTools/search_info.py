@@ -1,5 +1,6 @@
 import requests
-from langchain_core.tools import tool
+
+from ._server import mcp
 
 
 PRODUCT_SEARCH_URL = "https://en.wikipedia.org/w/api.php"
@@ -54,7 +55,7 @@ def _search_news(keyword: str) -> list[str]:
     return results
 
 
-@tool
+@mcp.tool()
 def search_info(keyword: str, category: str = "all") -> str:
     """搜索各类信息。
 
